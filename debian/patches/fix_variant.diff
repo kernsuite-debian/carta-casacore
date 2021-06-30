@@ -1,0 +1,107 @@
+We remove a deprecation fix that rewrites some submodule files from cmake and replace it with a debian patch.
+Index: carta-casacore/casa6/casa5/code/stdcasa/StdCasa/variant.cc
+===================================================================
+--- carta-casacore.orig/casa6/casa5/code/stdcasa/StdCasa/variant.cc
++++ carta-casacore/casa6/casa5/code/stdcasa/StdCasa/variant.cc
+@@ -1557,7 +1557,7 @@ void variant::as( TYPE t, int size ) {
+ }
+ 
+ #define GETIT(CONST,CONST2,RET_TYPE,NAME,TYPE,VAL,DEREF)        \
+-CONST RET_TYPE variant::NAME( ) CONST2 throw(error) {           \
++CONST RET_TYPE variant::NAME( ) CONST2  {           \
+     if ( typev != TYPE )                                        \
+ 	ThrowCc( create_message( #NAME " called for type") );	    \
+     return DEREF val.VAL;					\
+Index: carta-casacore/casa6/casa5/code/stdcasa/variant.h
+===================================================================
+--- carta-casacore.orig/casa6/casa5/code/stdcasa/variant.h
++++ carta-casacore/casa6/casa5/code/stdcasa/variant.h
+@@ -157,39 +157,39 @@ class variant {
+ 
+ //      Const
+ //      ---------------------------------------------------
+-	bool getBool( ) const throw(error);
+-	int getInt( ) const  throw(error);
+-	unsigned int getuInt( ) const  throw(error);
+-	long long  getLong( ) const  throw(error);
+-	double getDouble( ) const throw(error);
+-	const std::complex<double> &getComplex( ) const throw(error);
+-	const std::string &getString( ) const throw(error);
+-	const std::vector<int> &getIntVec( ) const throw(error);
+-	const std::vector<unsigned int> &getuIntVec( ) const throw(error);
+-	const std::vector<long long> &getLongVec( ) const throw(error);
+-	const std::vector<bool> &getBoolVec( ) const throw(error);
+-	const std::vector<double> &getDoubleVec( ) const throw(error);
+-	const std::vector<std::complex<double> > &getComplexVec( ) const throw(error);
+-	const std::vector<std::string> &getStringVec( ) const throw(error);
+-	const record &getRecord( ) const throw(error);
++	bool getBool( ) const ;
++	int getInt( ) const  ;
++	unsigned int getuInt( ) const  ;
++	long long  getLong( ) const  ;
++	double getDouble( ) const ;
++	const std::complex<double> &getComplex( ) const ;
++	const std::string &getString( ) const ;
++	const std::vector<int> &getIntVec( ) const ;
++	const std::vector<unsigned int> &getuIntVec( ) const ;
++	const std::vector<long long> &getLongVec( ) const ;
++	const std::vector<bool> &getBoolVec( ) const ;
++	const std::vector<double> &getDoubleVec( ) const ;
++	const std::vector<std::complex<double> > &getComplexVec( ) const ;
++	const std::vector<std::string> &getStringVec( ) const ;
++	const record &getRecord( ) const ;
+         const std::vector<int> &shape() const;
+         const std::vector<int> &arrayshape() const {return shape();}
+ 
+ //	Modify
+ //      ---------------------------------------------------
+-	bool &getBoolMod( ) throw(error);
+-	int &getIntMod( ) throw(error);
+-	unsigned int &getuIntMod( ) throw(error);
+-	double &getDoubleMod( ) throw(error);
+-	std::complex<double> &getComplexMod( ) throw(error);
+-	std::string &getStringMod( ) throw(error);
+-	std::vector<int> &getIntVecMod( ) throw(error);
+-	std::vector<unsigned int> &getuIntVecMod( ) throw(error);
+-	std::vector<bool> &getBoolVecMod( ) throw(error);
+-	std::vector<double> &getDoubleVecMod( ) throw(error);
+-	std::vector<std::complex<double> > &getComplexVecMod( ) throw(error);
+-	std::vector<std::string> &getStringVecMod( ) throw(error);
+-	record &getRecordMod( ) throw(error);
++	bool &getBoolMod( ) ;
++	int &getIntMod( ) ;
++	unsigned int &getuIntMod( ) ;
++	double &getDoubleMod( ) ;
++	std::complex<double> &getComplexMod( ) ;
++	std::string &getStringMod( ) ;
++	std::vector<int> &getIntVecMod( ) ;
++	std::vector<unsigned int> &getuIntVecMod( ) ;
++	std::vector<bool> &getBoolVecMod( ) ;
++	std::vector<double> &getDoubleVecMod( ) ;
++	std::vector<std::complex<double> > &getComplexVecMod( ) ;
++	std::vector<std::string> &getStringVecMod( ) ;
++	record &getRecordMod( ) ;
+         std::vector<int> &shape();
+         std::vector<int> &arrayshape() {return shape();}
+ 
+Index: carta-casacore/imageanalysis/CMakeLists.txt
+===================================================================
+--- carta-casacore.orig/imageanalysis/CMakeLists.txt
++++ carta-casacore/imageanalysis/CMakeLists.txt
+@@ -383,16 +383,6 @@ install (FILES
+         DESTINATION include/casacode/components/SpectralComponents
+ )
+ 
+-
+-add_custom_target(
+-    patch_stdcasa_variant
+-    COMMAND sed -i.orig 's/throw[(]error[)]//g' ${CMAKE_SOURCE_DIR}/${CASA_CODE_PATH}/stdcasa/variant.h ${CMAKE_SOURCE_DIR}/${CASA_CODE_PATH}/stdcasa/StdCasa/variant.cc
+-    COMMAND rm -f ${CMAKE_SOURCE_DIR}/${CASA_CODE_PATH}/stdcasa/variant.h.orig ${CMAKE_SOURCE_DIR}/${CASA_CODE_PATH}/stdcasa/StdCasa/variant.cc.orig
+-)
+-
+-add_dependencies(casa_imageanalysis patch_stdcasa_variant)
+-
+-
+ install (FILES
+          ${CMAKE_SOURCE_DIR}/${CASA_CODE_PATH}/stdcasa/xerces.h
+          ${CMAKE_SOURCE_DIR}/${CASA_CODE_PATH}/stdcasa/Quantity.h

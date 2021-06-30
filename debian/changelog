@@ -1,0 +1,67 @@
+carta-casacore (3.4.0+5.8.0+2021.2.4-1kern1) focal; urgency=medium
+
+  * Inital upload to KERN
+
+ -- KERN packaging <packaging@kernsuite.info>  Wed, 30 Jun 2021 09:45:53 +0000
+
+carta-casacore (3.4.0+5.8.0+2021.2.4-1~focal2) focal; urgency=medium
+
+  * Rebuild to make the binary packages installable in parallel with a normal 
+    casacore version. Simplified and renamed binary packages. Removed tools, 
+    docs and Python library, since we don't use them. All files installed into
+    /opt.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Thu, 08 Apr 2021 11:30:37 +0200
+
+carta-casacore (3.4.0+5.8.0+2021.2.4-1~focal1) focal; urgency=medium
+
+  * Rebuild for new PPA with revised version numbering. Using casa6 revision 
+    37799d7b5 and casacore revision d6da19830.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Tue, 16 Mar 2021 11:17:33 +0200
+
+carta-casacore (2021.2.4-2~focal1) focal; urgency=medium
+
+  * Rebuild with correct optimisations and version number.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Thu, 04 Mar 2021 17:50:20 +0200
+
+carta-casacore (2021.2.4-1) focal; urgency=medium
+
+  * Bump upstream version for changes in feature branch; replace upstream cmake
+    fix with patch.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Thu, 04 Feb 2021 00:29:50 +0200
+
+carta-casacore (2021.1.30-2) focal; urgency=medium
+
+  * Rebuild after updates to debian package metadata.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Wed, 03 Feb 2021 18:16:56 +0200
+
+carta-casacore (2021.1.30-1) focal; urgency=medium
+
+  * Bumped upstream version.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Sat, 30 Jan 2021 04:04:57 +0200
+
+carta-casacore (2020.8.20-3) focal; urgency=medium
+
+  * Rebuild after changes to configuration in upstream repository.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Sat, 30 Jan 2021 03:06:53 +0200
+
+carta-casacore (2020.8.20-2) focal; urgency=medium
+
+  * Revised binary package split; merged image analysis dev and tools into 
+    existing casacore packages.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Thu, 28 Jan 2021 22:53:10 +0200
+
+carta-casacore (2020.8.20-1) focal; urgency=medium
+
+  * Initial commit of new package which more closely follows the structure of
+    other casacore packages. Using carta-casacore revision 95ed3eed and casa6
+    revision 37799d7b.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Fri, 22 Jan 2021 13:49:24 +0200

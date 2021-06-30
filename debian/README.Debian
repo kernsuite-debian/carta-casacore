@@ -1,0 +1,10 @@
+carta-casacore for Debian
+
+This package provides a build of a custom revision of casacore with the addition 
+of the CASA image analysis library. This is required as a dependency for the 
+CARTA image viewer. See the changelog for the revisions of the upstream source 
+which were used. This package was built with FFTW3, HDF5 and OpenMP. The Python 
+modules are not built. All files are installed into a custom directory in /opt,
+and the binary packages don't clash with standard packaged versions of casacore.
+
+ -- Adrianna Pińska <adrianna.pinska@gmail.com>  Fri, 22 Jan 2021 13:49:24 +0200

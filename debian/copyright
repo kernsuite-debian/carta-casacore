@@ -1,0 +1,174 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: carta-casacore (casacore + casa imageanalysis packaged for the CARTA project)
+Upstream-Contact: aips2-request@nrao.edu
+Source: https://github.com/CARTAvis/carta-casacore
+
+Files: *
+Copyright: 1992-2015 Associated Universities, Inc. Washington DC, USA.
+ 2010 ESO (in the framework of the ALMA collaboration)
+ 1988 Free Software Foundation
+ 1985-2012 Distributed Systems Software (Barry Brachman)
+ 2015 National Astronomical Observatory of Japan
+License: LGPL-2+
+
+Files: casa6/casatools/casacore/cmake/*
+Copyright: 2009 ASTRON (Netherlands Institute for Radio Astronomy)
+License: GPL-3+
+
+Files: casa6/casatools/casacore/cmake/SelectLibraryConfigurations.cmake
+ casa6/casatools/casacore/cmake/FindBISON.cmake
+ casa6/casatools/casacore/cmake/FindFLEX.cmake
+ casa6/casatools/casacore/cmake/FindHDF5.cmake
+Copyright: 2005-2009 Kitware, Inc.
+ 2006 Tristan Carel
+ 2009 Will Dicharry <wdicharry@stellarscience.com>
+License: BSD-3-clause
+Comment:
+ Distributed under the OSI-approved BSD License.
+
+Files: casa6/casatools/casacore/cmake/FindNUMPY.cmake
+Copyright: 2012 Continuum Analytics, Inc.
+License: MIT
+
+Files: */test/*
+ casa6/casatools/casacore/fits/apps/fits2table/fits2table.cc
+ casa6/casatools/casacore/build-tools/*
+ casa6/casatools/casacore/cmake/PythonInstall.cmake
+ casa6/casatools/casacore/casa/Arrays/ArrayOpsDiffShapes.*
+ casa6/casatools/casacore/casa/Utilities/Template.h
+ casa6/casatools/casacore/casa/apps/*
+ casa6/casatools/casacore/fits/apps/*
+ casa6/casatools/casacore/images/Regions/RegionManager.*
+ casa6/casatools/casacore/images/apps/image2fits.cc
+ casa6/casatools/casacore/lattices/Lattices/LatticeIndexer.cc
+ casa6/casatools/casacore/measures/Measures/MeasuresProxy.h
+ casa6/casatools/casacore/measures/apps/measuresdata/*
+ casa6/casatools/casacore/ms/MeasurementSets/MSHistoryHandler.*
+ casa6/casatools/casacore/msfits/MSFits/MSFitsOutput*
+ casa6/casatools/casacore/msfits/MSFits/FitsIDItoMS.cc
+ casa6/casatools/casacore/msfits/MSFits/MSFitsInput.*
+ casa6/casatools/casacore/msfits/apps/*
+ casa6/casatools/casacore/scimath/Fitting/FittingProxy.h
+ casa6/casatools/casacore/tables/LogTables/LogFilterExpr.*
+ casa6/casatools/casacore/tables/apps/*
+Copyright: 1993-2011 Associated Universities, Inc. Washington DC, USA.
+ 2006 ASTRON (Netherlands Foundation for Research in Astronomy)
+ 2010 ESO (in the framework of the ALMA collaboration)
+ 1996-1998 Jeffrey A. Uphoff, NRAO/AUI.
+ 1987-1994 Free Software Foundation, Inc.
+License: GPL-2+
+
+Files:
+ casa6/casatools/casacore/casa/OS/HostInfoDarwin.h
+ casa6/casatools/casacore/casa/OS/HostInfoHpux.h
+ casa6/casatools/casacore/casa/OS/HostInfoIrix.h
+ casa6/casatools/casacore/casa/OS/HostInfoLinux.h
+ casa6/casatools/casacore/casa/OS/HostInfoOsf1.h
+ casa6/casatools/casacore/casa/OS/HostInfoSolaris.h
+Copyright: 1984, 1989 William LeFebvre, Rice University
+ 1989-1994 William LeFebvre, Northwestern University
+ 1994-1995 William LeFebvre, Argonne National Laboratory
+ 1996 William LeFebvre, Group sys Consulting
+ 2002 Associated Universities Inc.
+License: freely-redistributable
+  This program may be freely redistributed,
+  but the copyright comment MUST remain intact.
+
+Files: debian/*
+Copyright: 2012 Ole Streicher <olebole@debian.org>
+ 2013-2016 Benda Xu <heroxbd@gentoo.org>
+ 2021 Adrianna Pińska <adrianna.pinska@gmail.com>
+License: GPL-2+
+
+License: LGPL-2+
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Library General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or (at your
+ option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Library General Public
+ License for more details.
+ .
+ On Debian systems, the full text of the GNU Lesser General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/LGPL-2'.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ On Debian systems, the full text of the GNU General Public License
+ version 3 can be found in the file
+ `/usr/share/common-licenses/GPL-3'.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+ .
+ 1. Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+    documentation and/or other materials provided with the distribution.
+ .
+ 3. Neither the name of the University nor the names of its contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ SUCH DAMAGE.
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to permit
+ persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+ OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the Free
+ Software Foundation; either version 2 of the License, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ more details.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ `/usr/share/common-licenses/GPL-2'.

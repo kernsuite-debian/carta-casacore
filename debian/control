@@ -1,0 +1,62 @@
+Source: carta-casacore
+Section: science
+Priority: optional
+Maintainer: Adrianna Pińska <adrianna.pinska@gmail.com>
+Uploaders: KERN packaging <packaging@kernsuite.info>
+Build-Depends: bison,
+               cmake (>= 1.6.2),
+               debhelper-compat (= 12),
+               dh-python,
+               doxygen,
+               flex,
+               gfortran,
+               libblas-dev,
+               libboost-python-dev,
+               libcfitsio-dev,
+               libfftw3-dev,
+               libgsl-dev,
+               liblapack-dev,
+               libncurses5-dev,
+               libreadline6-dev,
+               python3-dev,
+               python3-numpy-dev,
+               wcslib-dev,
+               libhdf5-dev
+Standards-Version: 4.1.4
+Homepage: https://github.com/CARTAvis/carta-casacore
+Vcs-Browser: https://github.com/idia-astro/carta-casacore-deb
+Vcs-Git: https://github.com/idia-astro/carta-casacore-deb.git
+
+Package: carta-casacore-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libcartacasacore (= ${binary:Version}),
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: CASA core library development files
+ The casacore package contains the core libraries of the old
+ AIPS++/CASA (Common Astronomy Software Applications) package. This
+ split was made to get a better separation of core libraries and
+ applications.
+ .
+ The CASA image analysis module is also included.
+ .
+ This package contains the files for application development required to build the CARTA image viewer.
+
+Package: libcartacasacore
+Section: libs
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Recommends: casacore-data
+Multi-Arch: same
+Description: CASA core modules
+ The casacore package contains the core libraries of the old
+ AIPS++/CASA (Common Astronomy Software Applications) package. This
+ split was made to get a better separation of core libraries and
+ applications.
+ .
+ The CASA image analysis module is also included.
+ .
+ This package contains the libraries required as dependencies by the CARTA image viewer.
