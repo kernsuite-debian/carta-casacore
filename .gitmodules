@@ -1,0 +1,4 @@
+[submodule "casa6"]
+	path = casa6
+	url = https://open-bitbucket.nrao.edu/scm/casa/casa6.git
+	ignore = dirty

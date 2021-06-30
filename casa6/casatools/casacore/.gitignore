@@ -1,0 +1,12 @@
+doc/html/
+build/
+*~
+*table.lock
+*CMakeCache.txt
+*CMakeFiles
+.project
+.cproject
+.settings
+WSRT_Measures.ztar
+sofa.tgz
+sofa/

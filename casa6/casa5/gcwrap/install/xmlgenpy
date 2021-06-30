@@ -1,0 +1,19 @@
+#!/bin/sh
+CASAROOT=`echo $CASAPATH | awk '{print $1}'`
+CASAARCH=`echo $CASAPATH | awk '{printf "%s/%s", $1, $2}'`
+
+if [ -e "$CASAROOT/xml/casa2pyimp.xsl" ]; then
+   XMLROOT="$CASAROOT/xml"
+else
+   XMLROOT="$CASAARCH/xml"
+fi
+
+SAXONJAR="$CASAARCH/lib/saxon8.jar"
+if [ ! -e ${SAXONJAR} ]; then
+   SAXONJAR=${CASAROOT}/java/saxon8.jar
+   if [ ! -e ${SAXONJAR} ] ; then
+      SAXONJAR=${CASAROOT}/lib/saxon8.jar
+   fi
+fi
+java -jar $SAXONJAR $1.xml  $XMLROOT/casa2pycli.xsl > $1_cli.py
+java -jar $SAXONJAR $1.xml  $XMLROOT/casa2pyimp.xsl > $1.py
